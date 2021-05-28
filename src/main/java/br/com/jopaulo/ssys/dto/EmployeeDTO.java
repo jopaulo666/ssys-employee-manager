@@ -4,14 +4,20 @@ import java.io.Serializable;
 import java.time.Instant;
 
 import br.com.jopaulo.ssys.entities.Employee;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @SuppressWarnings("serial")
-@Data
 @Getter
 @Setter
+@Data
+@EqualsAndHashCode
+@NoArgsConstructor
+@AllArgsConstructor
 public class EmployeeDTO implements Serializable{
 
 	private Long id;
@@ -24,6 +30,7 @@ public class EmployeeDTO implements Serializable{
 	public EmployeeDTO(Employee entity) {
 		this.id = entity.getId();
 		this.name = entity.getName();
+		this.email = entity.getEmail();
 		this.department = entity.getDepartment();
 		this.salary = entity.getSalary();
 		this.birthDate = entity.getBirthDate();
