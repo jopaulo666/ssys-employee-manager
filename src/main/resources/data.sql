@@ -1,0 +1,10 @@
+INSERT INTO tb_employee (name, email, department, salary, birth_date) VALUES ('Tom Araya', 'tom@gmail.com', 'Back-End', '2500.0', '1984-01-13T20:50:07.12345Z');
+INSERT INTO tb_employee (name, email, department, salary, birth_date) VALUES ('Dave Lombardo', 'dave@gmail.com', 'Front-End', '3400.0', '1990-12-13T20:50:07.12345Z');
+INSERT INTO tb_employee (name, email, department, salary, birth_date) VALUES ('James Hetfield', 'james@gmail.com', 'Fullstack', '8000.0', '1983-01-13T20:50:07.12345Z');
+INSERT INTO tb_employee (name, email, department, salary, birth_date) VALUES ('Bruce Dickinson', 'bruce@gmail.com', 'Back-End', '3000.0', '1991-04-13T20:50:07.12345Z');
+INSERT INTO tb_employee (name, email, department, salary, birth_date) VALUES ('Steve Harris', 'steve@gmail.com', 'Front-End', '2500.0', '1982-12-13T20:50:07.12345Z');
+INSERT INTO tb_employee (name, email, department, salary, birth_date) VALUES ('Dave Murray', 'dave_murray@gmail.com', 'Fullstack', '2500.0', '2020-07-13T20:50:07.12345Z');
+INSERT INTO tb_employee (name, email, department, salary, birth_date) VALUES ('Nicko McBrain', 'nicko@gmail.com', 'Database', '2300.0', '1998-10-13T20:50:07.12345Z');
+INSERT INTO tb_employee (name, email, department, salary, birth_date) VALUES ('Chuck Schuldiner', 'chuck@gmail.com', 'Back-End', '5600.0', '2020-07-13T20:50:07.12345Z');
+INSERT INTO tb_employee (name, email, department, salary, birth_date) VALUES ('Jeff Hanneman', 'jeff@gmail.com', 'Front-End', '10000.0', '1998-10-13T20:50:07.12345Z');
+INSERT INTO tb_employee (name, email, department, salary, birth_date) VALUES ('Kerry King', 'kerry@gmail.com', 'Back-End', '2000.0', '1998-01-13T20:50:07.12345Z');
