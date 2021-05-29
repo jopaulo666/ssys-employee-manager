@@ -29,6 +29,18 @@ public class EmployeeService {
 	}
 	
 	@Transactional(readOnly = true)
+	public Page<EmployeeDTO> findAllAge(PageRequest pageRequest){
+		Page<Employee> list = repository.findAll(pageRequest);
+		return list.map(x -> new EmployeeDTO(x));
+	}
+	
+	@Transactional(readOnly = true)
+	public Page<EmployeeDTO> findAllSalary(PageRequest pageRequest){
+		Page<Employee> list = repository.findAll(pageRequest);
+		return list.map(x -> new EmployeeDTO(x));
+	}
+	
+	@Transactional(readOnly = true)
 	public EmployeeDTO findById(long id) {
 		Optional<Employee> obj = repository.findById(id);
 		Employee entity = obj.orElseThrow(() -> new ResourceNotFoundException("Funcionário de código " +id+ " não encontrado"));

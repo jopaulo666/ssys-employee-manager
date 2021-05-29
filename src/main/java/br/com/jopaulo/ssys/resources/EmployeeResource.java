@@ -33,7 +33,33 @@ public class EmployeeResource {
 			@RequestParam(value = "page", defaultValue = "0") Integer page,
 			@RequestParam(value = "linesPerPage", defaultValue = "10") Integer linesPerPage,
 			@RequestParam(value = "direction", defaultValue = "ASC") String direction,
-			@RequestParam(value = "orderBy", defaultValue = "name") String orderBy){
+			@RequestParam(value = "orderBy", defaultValue = "id") String orderBy){
+		
+		PageRequest pageRequest = PageRequest.of(page, linesPerPage, Direction.valueOf(direction), orderBy);
+		
+		Page<EmployeeDTO> list = service.findAllPaged(pageRequest);
+		return ResponseEntity.ok().body(list);
+	}
+	
+	@GetMapping(value = "/age")
+	public ResponseEntity<Page<EmployeeDTO>> findAllAge(
+			@RequestParam(value = "page", defaultValue = "0") Integer page,
+			@RequestParam(value = "linesPerPage", defaultValue = "10") Integer linesPerPage,
+			@RequestParam(value = "direction", defaultValue = "DESC") String direction,
+			@RequestParam(value = "orderBy", defaultValue = "birthDate") String orderBy){
+		
+		PageRequest pageRequest = PageRequest.of(page, linesPerPage, Direction.valueOf(direction), orderBy);
+		
+		Page<EmployeeDTO> list = service.findAllPaged(pageRequest);
+		return ResponseEntity.ok().body(list);
+	}
+	
+	@GetMapping(value = "/salary")
+	public ResponseEntity<Page<EmployeeDTO>> findAllSalary(
+			@RequestParam(value = "page", defaultValue = "0") Integer page,
+			@RequestParam(value = "linesPerPage", defaultValue = "10") Integer linesPerPage,
+			@RequestParam(value = "direction", defaultValue = "ASC") String direction,
+			@RequestParam(value = "orderBy", defaultValue = "salary") String orderBy){
 		
 		PageRequest pageRequest = PageRequest.of(page, linesPerPage, Direction.valueOf(direction), orderBy);
 		
